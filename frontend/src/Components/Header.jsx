@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const user = useSelector((state) => state?.user?.user);
+  console.log("user:",user);
   const dispatch = useDispatch();
   const context = useContext(Context);
   const navigate = useNavigate();
@@ -57,9 +58,9 @@ const Header = () => {
   return (
     <header className="h-16 bg-white shadow-md fixed w-full z-40">
       <div className="h-full container mx-auto flex items-center justify-between px-4 ">
-        <div className="h-16  ">
+        <div className="h-20 w-28 object-scale-down mix-blend-multiply flex justify-center items-center"   >
           <Link to={"/"}>
-            <Logo w={80} h={50} />
+            <img src="/STORE.png" alt="img"className="h-full w-16 object-contain mix-blend-multiply" />
           </Link>
         </div>
         <div className="hidden lg:flex justify-center items-center w-full max-w-sm border rounded-full focus-within:shadow-lg">
@@ -131,7 +132,7 @@ const Header = () => {
             )}
           </div>
           <div>
-            {user?._id ? (
+            {user?._id ? ( //if user is logged in
               <button
                 onClick={handleLogOut}
                 className="bg-red-500 rounded-xl px-3 py-1 hover:bg-red-600 text-white"

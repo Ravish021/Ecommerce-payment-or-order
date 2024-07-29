@@ -26,7 +26,7 @@ const login = async (req,res)=>{
                 email:user.email,
 
             }
-            console.log(tokenData)
+            console.log("token: ",tokenData)
             const token = jwt.sign(tokenData, process.env.TOKEN_SECRET_KEY, { expiresIn: 60 * 60 *24 });
             const tokenOption ={
                 httpOnly:true,
