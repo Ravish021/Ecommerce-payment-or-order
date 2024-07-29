@@ -1,5 +1,5 @@
 {
-    "version":2,
+    "version":"3.2.7",
     "name":"fullstack-ecommerce-app",
     "builds":[
         {
