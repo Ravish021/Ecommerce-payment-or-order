@@ -23,7 +23,7 @@ const adminPanel = () =>{
                 <img
                   src={user?.profilePic}
                   className="w-20 h-10 rounded-full  "
-                  alt={user.username}
+                  alt={user?.username}
                 />
               ) : (
                 <FaCircleUser />
